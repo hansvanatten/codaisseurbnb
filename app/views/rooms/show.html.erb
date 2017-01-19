@@ -31,7 +31,15 @@
 
 </div>
 
+
 <%= link_to "Back", rooms_path, class: "btn btn-default" %>
+
+<!-- Photos -->
+<h4>Photos</h4>
+<% @room.photos.each do |photo| %>
+  <%= image_tag photo.image %>
+<% end %>
+
 
 <h4>Themes</h4>
 <% @themes.each do |theme| %>
